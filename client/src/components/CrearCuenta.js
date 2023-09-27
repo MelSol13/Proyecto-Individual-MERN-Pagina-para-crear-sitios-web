@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from "axios";
 import { useNavigate, Link } from 'react-router-dom';
+import"./CrearCuenta.css"
 
 function CrearCuenta() {
     const [firstName, setFirstName] = useState('');
@@ -28,7 +29,7 @@ function CrearCuenta() {
     }
 
     return (
-        <div className='row'>
+        <div className='row1'>
             <div className='col-8'>
                 <h2>Crear una cuenta</h2>
                 <form onSubmit={registro}>

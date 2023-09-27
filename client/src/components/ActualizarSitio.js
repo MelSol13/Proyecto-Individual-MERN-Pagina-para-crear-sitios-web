@@ -3,14 +3,15 @@ import Select from 'react-select';
 import { ChromePicker } from 'react-color';
 import axios from 'axios';
 import { useNavigate, useParams } from "react-router-dom";
+import "./ActualizarSitio.css"
 
 
 const ActualizarSitio = () => {
 
-    const imagen = "https://plus.unsplash.com/premium_photo-1683147638125-fd31a506a429?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fGRpc2UlQzMlQjFvJTIwd2VifGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60";
+    const imagen = "https://media.istockphoto.com/id/1387782756/es/foto/pc-de-computadora-moderna-con-carta-de-colores-en-la-pantalla-del-monitor-taza-de-caf%C3%A9-y.jpg?s=612x612&w=0&k=20&c=M94eQcTWc4bp4Z9_4VC_PO0olEwnoqpF7NT1kna6LaY=";
 
     const { id } = useParams();
-    const[sitio, setSitio]= useState({});
+    const [sitio, setSitio] = useState({});
     const [nombre, setNombre] = useState('');
     const [url, setUrl] = useState('');
     const [categoria, setCategoria] = useState('');
@@ -27,11 +28,11 @@ const ActualizarSitio = () => {
     const [imagen1, setImagen1] = useState('');
     const [imagen2, setImagen2] = useState('');
     const [imagen3, setImagen3] = useState('');
-    const [errors, setErrors]=useState({});
+    const [errors, setErrors] = useState({});
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/sitios/${id}`, {withCredentials: true})
+        axios.get(`http://localhost:8000/api/sitios/${id}`, { withCredentials: true })
             .then(res => {
                 const sitio = res.data;
                 setNombre(sitio.nombre);
@@ -52,7 +53,7 @@ const ActualizarSitio = () => {
                 setFuenteSeleccionada(sitio.fuenteSeleccionada);
             })
             .catch(err => {
-                if(err.response.status === 401){
+                if (err.response.status === 401) {
                     navigate("/iniciar-sesion");
                 }
             });
@@ -61,7 +62,7 @@ const ActualizarSitio = () => {
 
     const actualizarSitio = (e) => {
         e.preventDefault();
-        axios.put(`http://localhost:8000/api/sitios/${id}`,{
+        axios.put(`http://localhost:8000/api/sitios/${id}`, {
             nombre,
             url,
             categoria,
@@ -78,9 +79,9 @@ const ActualizarSitio = () => {
             colorFondo,
             colorInformacion,
             fuenteSeleccionada
-        }, {withCredentials:true})
-        .then(res => navigate(`/vistaprevia/${res.data._id}`))
-        .catch(err => setErrors(err.response.data.errors))
+        }, { withCredentials: true })
+            .then(res => navigate(`/vistaprevia/${res.data._id}`))
+            .catch(err => setErrors(err.response.data.errors))
     };
 
 
@@ -90,101 +91,100 @@ const ActualizarSitio = () => {
         { value: 'tienda', label: 'Tienda' },
     ];
 
+    const fontOptions = [
+        { value: 'Croissant One', label: 'Croissant One' },
+        { value: 'Lexend Peta', label: 'Lexend Peta' },
+        { value: 'Love Ya Like A Sister', label: 'Love Ya Like A Sister' },
+        { value: 'Loved by the King', label: 'Loved by the King' },
+        { value: 'Mooli', label: 'Mooli' },
+        { value: 'Pathway Extreme', label: 'Pathway Extreme' },
+        { value: 'Quicksand', label: 'Quicksand' },
+        { value: 'Roboto', label: 'Roboto' },
+        { value: 'Skranji', label: 'Skranji' },
+    ];
 
     return (
-        <div>
-            <form onSubmit={actualizarSitio}>
-                <img src={imagen} alt="Imagen predeterminada" />
-                <div>
-                <h1>Realizar Cambios</h1>
-                </div>
-                <div>
-                    <label>Nombre del sitio:</label>
-                    <input type="text" name="nombre " value={nombre} onChange={e => setNombre(e.target.value)} />
-                </div>
-                <div>
-                    <label>Categoría:</label>
-                    <Select
-                        options={opcionesCategorias}
-                        value={categoria}
-                        onChange={(opcionSeleccionada) => setCategoria(opcionSeleccionada)}
-                    />
-                </div>
-                <div>
-                    <label>URL:</label>
-                    <input
-                        type="text"
-                        value={url}
-                        onChange={(e) => setUrl(e.target.value)}
-                    />
-                </div>
-                <div>
-                    <label>Logo:</label>
-                    <input type="text" value={logo} onChange={(e) => setLogo(e.target.value)} />
-                </div>
-                <div>
-                    <label>Imagen 1:</label>
-                    <input type="text" value={imagen1} onChange={(e) => setImagen1(e.target.value)} />
-                </div>
-                <div>
-                    <label>Imagen 2:</label>
-                    <input type="text" value={imagen2} onChange={(e) => setImagen2(e.target.value)} />
-                </div>
-                <div>
-                    <label>Imagen 3:</label>
-                    <input type="text" value={imagen3} onChange={(e) => setImagen3(e.target.value)} />
-                </div>
-                <div>
-                    <label>Eslogan:</label>
-                    <input type="text" value={eslogan} onChange={(e) => setEslogan(e.target.value)} />
-                </div>
-                <div>
-                    <label>Descripción:</label>
-                    <textarea value={descripcion} onChange={(e) => setDescripcion(e.target.value)} />
-                </div>
-                <div>
-                    <label>Servicio 1:</label>
-                    <input type="text" value={servicio1} onChange={(e) => setServicio1(e.target.value)} />
-                </div>
-                <div>
-                    <label>Servicio 2:</label>
-                    <input type="text" value={servicio2} onChange={(e) => setServicio2(e.target.value)} />
-                </div>
-                <div>
-                    <label>Servicio 3:</label>
-                    <input type="text" value={servicio3} onChange={(e) => setServicio3(e.target.value)} />
-                </div>
-                <div>
-                    <label>Fuente:</label>
-                    <select
-                        value={fuenteSeleccionada}
-                        onChange={(e) => setFuenteSeleccionada(e.target.value)}
-                    >
-                        <option value="">Seleccionar una fuente</option>
-                        <option value="lovelo">Lovelo</option>
-                        <option value="opera-sans">Opera Sans</option>
-                        <option value="bugaki">Bugaki</option>
-                    </select>
-                </div>
-                <div>
-                    <h2>Elegir Colores:</h2>
-                    <div>
-                        <label>Barra Superior:</label>
-                        <ChromePicker color={colorBarra} onChange={(color) => setColorBarra(color.hex)} />
+        <div className="container-3">
+            <img className="imagen-princ-2" src={imagen} alt="Imagen predeterminada" />
+            <div className="row">
+                <h1 className="titulo-2">Realizar Cambios</h1>
+                <form className="form-2" onSubmit={actualizarSitio}>
+                    <div className="col-md-4">
+                        <div className="form-group">
+                            <label>Nombre del sitio:</label>
+                            <input type="text" className="form-control" name="nombre" value={nombre} onChange={e => setNombre(e.target.value)} />
+                        </div>
+                        <div className="form-group">
+                            <label>Categoría:</label>
+                            <Select options={opcionesCategorias} value={categoria} onChange={(opcionSeleccionada) => setCategoria(opcionSeleccionada)} />
+                        </div>
+                        <div className="form-group">
+                            <label>URL:</label>
+                            <input type="text" className="form-control" value={url} onChange={(e) => setUrl(e.target.value)} />
+                        </div>
+                        <div className="form-group">
+                            <label>Logo:</label>
+                            <input type="text" className="form-control" value={logo} onChange={(e) => setLogo(e.target.value)} />
+                        </div>
+                        <div className="form-group">
+                            <label>Imagen 1:</label>
+                            <input type="text" className="form-control" value={imagen1} onChange={(e) => setImagen1(e.target.value)} />
+                        </div>
+                        <div className="form-group">
+                            <label>Imagen 2:</label>
+                            <input type="text" className="form-control" value={imagen2} onChange={(e) => setImagen2(e.target.value)} />
+                        </div>
+                        <div className="form-group">
+                            <label>Imagen 3:</label>
+                            <input type="text" className="form-control" value={imagen3} onChange={(e) => setImagen3(e.target.value)} />
+                        </div>
+                        <div className="form-group">
+                            <label>Eslogan:</label>
+                            <input type="text" className="form-control" value={eslogan} onChange={(e) => setEslogan(e.target.value)} />
+                        </div>
+                        <div className="form-group">
+                            <label>Descripción:</label>
+                            <textarea className="form-control" value={descripcion} onChange={(e) => setDescripcion(e.target.value)} />
+                        </div>
+                        <div className="form-group">
+                            <label>Servicio 1:</label>
+                            <input type="text" className="form-control" value={servicio1} onChange={(e) => setServicio1(e.target.value)} />
+                        </div>
+                        <div className="form-group">
+                            <label>Servicio 2:</label>
+                            <input type="text" className="form-control" value={servicio2} onChange={(e) => setServicio2(e.target.value)} />
+                        </div>
+                        <div className="form-group">
+                            <label>Servicio 3:</label>
+                            <input type="text" className="form-control" value={servicio3} onChange={(e) => setServicio3(e.target.value)} />
+                        </div>
+                        <div className="form-group">
+                            <label>Fuente:</label>
+                            <Select className="mb-5" options={fontOptions} value={fontOptions.find(option => option.value === fuenteSeleccionada)} onChange={(selectedOption) => setFuenteSeleccionada(selectedOption.value)} />
+                        </div>
                     </div>
-                    <div>
-                        <label>Fondo:</label>
-                        <ChromePicker color={colorFondo} onChange={(color) => setColorFondo(color.hex)} />
+                    <div className="col-md-4">
+                        <h2 className="titulo-colores">Elegir Colores:</h2>
+                        <div>
+                            <label>Barra Superior:</label>
+                            <ChromePicker color={colorBarra} onChange={(color) => setColorBarra(color.hex)} />
+                        </div>
+                        <div>
+                            <label>Fondo:</label>
+                            <ChromePicker color={colorFondo} onChange={(color) => setColorFondo(color.hex)} />
+                        </div>
+                        <div>
+                            <label>Información:</label>
+                            <ChromePicker color={colorInformacion} onChange={(color) => setColorInformacion(color.hex)} />
+                        </div>
+                        <div>
+                            <button type="submit" className="btn-vista2" onClick={actualizarSitio}>
+                                Vista Previa
+                            </button>
+                        </div>
                     </div>
-                    <div>
-                        <label>Información:</label>
-                        <ChromePicker color={colorInformacion} onChange={(color) => setColorInformacion(color.hex)} />
-                    </div>
-                </div>
-                <button type="submit" className="btn btn-primary" onClick={actualizarSitio}>
-                    Vista Previa
-                </button>
-            </form>
+                </form>
+            </div>
         </div>
     );
 };

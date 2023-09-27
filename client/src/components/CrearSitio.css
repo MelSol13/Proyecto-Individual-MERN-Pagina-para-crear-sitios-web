@@ -18,15 +18,18 @@
 }
 
 .titulo{
+    color:  rgba(87, 36, 36, 0.685);
     display: flex;
     flex-direction: column;
     margin-left: 350px;
     margin-top: 30px;
+    margin-bottom: 40px;
 }
 
 .btn-vista{
-    color: black;
+    color:rgba(29, 10, 10, 0.685);
     font-weight: bold;
+    font-size: 20px;
     font-family:cursive;
     background-color: rgb(162, 141, 109);
     margin-top: 50px;
@@ -34,4 +37,10 @@
     width: 150px;
     height: 50px;
     border-radius: 10px;
+}
+
+.titulo-colores1{
+    font-size: 40px;
+    color: rgba(87, 36, 36, 0.685);
+    margin-bottom: 40px;
 }

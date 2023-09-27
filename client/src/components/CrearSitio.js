@@ -149,18 +149,18 @@ const CrearSitio = () => {
                         </div>
                     </div>
                     <div className='col-md-6'>
-                        <h2>Elegir Colores:</h2>
+                        <h2 className='titulo-colores1'>Elegir Colores:</h2>
                         <div>
                             <label>Barra Superior:</label>
-                            <ChromePicker color={colorBarra} onChange={(color) => setColorBarra(color.hex)} />
+                            <ChromePicker className="color-barra mb-4" color={colorBarra} onChange={(color) => setColorBarra(color.hex)} />
                         </div>
                         <div>
                             <label>Fondo:</label>
-                            <ChromePicker color={colorFondo} onChange={(color) => setColorFondo(color.hex)} />
+                            <ChromePicker className="color-fondo mb-4" color={colorFondo} onChange={(color) => setColorFondo(color.hex)} />
                         </div>
                         <div>
                             <label>Información:</label>
-                            <ChromePicker color={colorInformacion} onChange={(color) => setColorInformacion(color.hex)} />
+                            <ChromePicker className="color-informacion mb-4" color={colorInformacion} onChange={(color) => setColorInformacion(color.hex)} />
                         </div>
                         <div>
                         <button type="submit" className="btn-vista" onClick={guardarSitio}>
