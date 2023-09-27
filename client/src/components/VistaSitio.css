@@ -1,0 +1,61 @@
+.btn-logout{
+    background-color: rgb(196, 130, 130);
+    color: whitesmoke;
+    font-family: 'Trebuchet MS';
+    border: 2px solid rgb(48, 46, 46);
+    border-radius: 5px;
+    margin-left: 1400px;
+    width:150px;
+}
+
+.barraSuperior{
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.sitioNombre{
+    font-size: 50px;
+    display: flex;
+    margin-right: 750px;
+}
+
+.logo{
+    display: flex;
+    width: 100px;
+}
+
+.eslogan{
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-left: 80px;
+}
+
+.body{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.columna-izquierda{
+    display: flex;
+}
+
+.columna-derecha{
+    display: flex;
+}
+
+.imagen1{
+    width: 100px;
+}
+
+.imagen2{
+    width: 100px;
+}
+
+.imagen3{
+    width: 100px;
+}

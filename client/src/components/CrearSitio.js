@@ -80,12 +80,12 @@ const CrearSitio = () => {
 
 
     return (
-        <div>
+        <div className='container-2'>
             <img src={imagen} className='imagen-princ' alt="Imagen predeterminada" />
             <div className='row'>
                 <h1 className='titulo'>Diseña a tu gusto</h1>
                 <form className='form' onSubmit={guardarSitio}>
-                    <div className='col-md-6'>
+                    <div className='col-md-4'>
                         <div className='form-group'>
                             <label>Nombre del sitio:</label>
                             <input type="text" name="nombre " className="form-control" value={nombre} onChange={e => setNombre(e.target.value)} />
@@ -163,7 +163,7 @@ const CrearSitio = () => {
                             <ChromePicker color={colorInformacion} onChange={(color) => setColorInformacion(color.hex)} />
                         </div>
                         <div>
-                        <button type="submit" className="vista-previa btn btn-primary mt-5 mb-5" onClick={guardarSitio}>
+                        <button type="submit" className="btn-vista" onClick={guardarSitio}>
                             Vista Previa
                         </button>
                         </div>

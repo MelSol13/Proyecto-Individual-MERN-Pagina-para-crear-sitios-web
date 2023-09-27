@@ -11,7 +11,7 @@ const ButtonLogout = () => {
     }
 
     return(
-        <button className="btn btn-danger" onClick={cerrarSesion}>Cerrar Sesión</button>
+        <button className="btn-logout" onClick={cerrarSesion}>Cerrar Sesión</button>
     )
 }
 

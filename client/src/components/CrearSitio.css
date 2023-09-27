@@ -1,10 +1,18 @@
+.container-2{
+    width: 1880px;
+    height: 1800px;
+    background-image: url(https://img.freepik.com/free-photo/light-wood-texture-beige-background-with-design-space_53876-160412.jpg?size=626&ext=jpg&ga=GA1.1.556705.1695271294&semt=ais);
+}
+
 .form{
+    margin-left: 200px;
     display: flex;
     flex-direction: row;
-    gap: 20%;
+    gap: 15%;
 }
 
 .imagen-princ{
+    margin-left: 200px;
     width: 1130px;
     height: 450px;
 }
@@ -12,6 +20,18 @@
 .titulo{
     display: flex;
     flex-direction: column;
-    margin-left: 180px;
+    margin-left: 350px;
     margin-top: 30px;
+}
+
+.btn-vista{
+    color: black;
+    font-weight: bold;
+    font-family:cursive;
+    background-color: rgb(162, 141, 109);
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
 }
