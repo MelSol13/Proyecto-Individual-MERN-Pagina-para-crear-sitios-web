@@ -45,10 +45,10 @@ const CrearSitio = () => {
             imagen1,
             imagen2,
             imagen3,
+            fuenteSeleccionada,
             colorBarra,
             colorFondo,
-            colorInformacion,
-            fuenteSeleccionada
+            colorInformacion
         }, { withCredentials: true })
             .then(res => navigate(`/vistaprevia/${res.data._id}`))
             .catch(err => {
@@ -141,10 +141,7 @@ const CrearSitio = () => {
                         </div>
                         <div className='form-group'>
                             <label>Fuente:</label>
-                            <Select className='mb-5'
-                                options={fontOptions}
-                                value={fontOptions.find(option => option.value === fuenteSeleccionada)}
-                                onChange={(selectedOption) => setFuenteSeleccionada(selectedOption.value)}
+                            <Select className='mb-5' options={fontOptions} value={fontOptions.find(option => option.value === fuenteSeleccionada)} onChange={(selectedOption) => setFuenteSeleccionada(selectedOption.value)}
                             />
                         </div>
                     </div>

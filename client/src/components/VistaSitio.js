@@ -29,15 +29,15 @@ const VistaSitio = () => {
 
 
     return (
-        <div>
+        <div style={{fontFamily: `${sitio.fuenteSeleccionada}`}}>
             <ButtonLogout />
-            <div className='fondo'>
-                <div className='barraSuperior'>
+            <div className='fondo' style={{background: `${sitio.colorFondo}`}}>
+                <div className='barraSuperior' style={{background: `${sitio.colorBarra}`}}>
                     <p className='sitioNombre'>{sitio.nombre}</p>
                     <img src={sitio.logo} className='logo' alt="logo"></img>
                 </div>
                 <div className='body'>
-                    <div className='columna-izquierda'>
+                    <div className='columna-izquierda' style={{background: `${sitio.colorInformacion}`}}>
                         <div>
                             <p className='eslogan'>{sitio.eslogan}</p>
                         </div>

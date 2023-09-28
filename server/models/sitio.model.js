@@ -43,6 +43,9 @@ const EsquemaSitio = new mongoose.Schema({
     imagen3:{
         type:String,
     }, 
+    fuenteSeleccionada:{
+        type:String,
+    },
     colorBarra:{
         type: String
     },

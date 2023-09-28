@@ -9,14 +9,12 @@
 }
 
 .fondo{
-    background-color: rgb(254, 249, 243);
     border: 1px solid rgb(56, 55, 55);
     padding: 30px;
     margin-bottom: 30px;
 }
 
 .barraSuperior{
-    background-color: antiquewhite;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -45,7 +43,6 @@
 
 .columna-izquierda{
     color: ghostwhite;
-    background-color: rgb(237, 153, 122);
     margin-top: 20px;
     border: 1px solid rgb(128, 128, 128);
     display: flex;
@@ -59,12 +56,11 @@
     font-weight: bold;
     margin-top: 100px;
     margin-left: 80px;
-    -webkit-text-stroke: 1px rgb(47, 46, 44);
+    -webkit-text-stroke: 0.5px rgb(47, 46, 44);
 }
 
 .descripcion{
     font-size: 25px;
-    font-style: italic;
     margin-top: 70px;
     margin-left: 30px;
 }
@@ -72,7 +68,6 @@
 ul{
     list-style-type: circle;
     font-size: 20px;
-    font-style:oblique;
     margin-top: 50px;
     margin-left: 30px;
 }
@@ -102,7 +97,7 @@ ul{
     height: 200px;
     margin-left: 100px;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .btn-cambios{
@@ -125,7 +120,7 @@ ul{
     font-style: oblique;
     border: 1px solid rgb(33, 32, 32);
     border-radius: 20px;
-    margin-right: 700px;
+    margin-right: 600px;
     margin-bottom: 50px;
     padding: 10px;
 }
