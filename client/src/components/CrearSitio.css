@@ -1,7 +1,9 @@
 .container-2{
     width: 1880px;
     height: 1800px;
-    background-image: url(https://img.freepik.com/free-photo/light-wood-texture-beige-background-with-design-space_53876-160412.jpg?size=626&ext=jpg&ga=GA1.1.556705.1695271294&semt=ais);
+    background-image: url(https://images.unsplash.com/photo-1579546928686-286c9fbde1ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjB8fGZvbmRvJTIwYWJzdHJhY3RvfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);
+    background-size: 1900px 1800px;
+    background-repeat: no-repeat;
 }
 
 .form{
@@ -15,10 +17,11 @@
     margin-left: 200px;
     width: 1130px;
     height: 450px;
+    border-radius: 20px;
 }
 
 .titulo{
-    color:  rgba(87, 36, 36, 0.685);
+    color:  rgba(18, 111, 125, 0.944);
     display: flex;
     flex-direction: column;
     margin-left: 350px;
@@ -31,7 +34,7 @@
     font-weight: bold;
     font-size: 20px;
     font-family:cursive;
-    background-color: rgb(162, 141, 109);
+    background-color: rgb(209, 86, 115);
     margin-top: 50px;
     margin-left: 50px;
     width: 150px;
@@ -41,6 +44,6 @@
 
 .titulo-colores1{
     font-size: 40px;
-    color: rgba(87, 36, 36, 0.685);
+    color: rgb(209, 86, 115);
     margin-bottom: 40px;
 }

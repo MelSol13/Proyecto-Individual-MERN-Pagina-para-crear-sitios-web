@@ -1,4 +1,19 @@
+.sesion{
+    width: 1900px;
+    height: 900px;
+    padding-top: 80px;
+    background: url(https://img.freepik.com/free-photo/abstract-coral-orange-color-background_53876-104720.jpg?w=1380&t=st=1695952443~exp=1695953043~hmac=73071dc41121643a552e6cc59d21d59aeb1b617ce938ff38264d0e9882571e90);
+    background-size: 1900px;
+    background-repeat: no-repeat;
+}
+
 .row2{
-    margin-left: 300px;
-    margin-top: 150px;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 800px;
+}
+
+.inic-tit{
+    color: rgb(210, 106, 68);
+    font-family: Cochin;
 }

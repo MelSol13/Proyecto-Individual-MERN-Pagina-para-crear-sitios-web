@@ -5,34 +5,38 @@
 .container-princ{
     width: 1900px;
     height: 900px;
-    background-image: url(https://img.freepik.com/free-vector/white-abstract-background_23-2148833155.jpg?size=626&ext=jpg&ga=GA1.2.556705.1695271294&semt=sph);
+    background-image: url(https://img.freepik.com/free-vector/abstract-colorful-shapes-background_23-2148769634.jpg?size=626&ext=jpg&ga=GA1.1.556705.1695271294&semt=ais);
+    background-size: 1900px 1900px;
+    background-repeat: no-repeat;
 }
 
 .img-princ{
     margin-top: 50px;
-    margin-left: 100px;
+    margin-left: 200px;
     width: 700px;
     height: 500px;
+    border-radius: 15px;
 }
 
 .crea{
+    color: rgb(246, 235, 246);
     display: flex;
     flex-direction: row;
     text-align: center;
-    font-size: 50px;
-    font-family: 'Lucida Sans';
+    font-size: 60px;
+    font-family:fantasy;
     flex-direction: column;
-    margin-left: 580px;
+    margin-left: 200px;
     margin-top: 50px;
     margin-bottom: 80px;
 }
 .btn-principal{
     margin-left: 450px;
-    font-size: 200%;
-    font-family:'Helvetica Neue';
+    font-size: 150%;
+    font-style: oblique;
     color: aliceblue;
-    background-color: rgb(36, 143, 143);
+    background-color: rgb(128, 42, 171);
     border: 2px solid rgba(0, 0, 0, 0.356);
-    border-radius: 8px;
+    border-radius: 20px;
     padding: 10px;
 }   

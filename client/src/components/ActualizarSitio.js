@@ -4,12 +4,12 @@ import { ChromePicker } from 'react-color';
 import axios from 'axios';
 import { useNavigate, useParams } from "react-router-dom";
 import "./ActualizarSitio.css"
+import ButtonLogout from './ButtonLogout';
 
 
 const ActualizarSitio = () => {
 
-    const imagen = "https://media.istockphoto.com/id/1387782756/es/foto/pc-de-computadora-moderna-con-carta-de-colores-en-la-pantalla-del-monitor-taza-de-caf%C3%A9-y.jpg?s=612x612&w=0&k=20&c=M94eQcTWc4bp4Z9_4VC_PO0olEwnoqpF7NT1kna6LaY=";
-
+    
     const { id } = useParams();
     const [sitio, setSitio] = useState({});
     const [nombre, setNombre] = useState('');
@@ -105,7 +105,7 @@ const ActualizarSitio = () => {
 
     return (
         <div className="container-3">
-            <img className="imagen-princ-2" src={imagen} alt="Imagen predeterminada" />
+            <ButtonLogout />
             <div className="row">
                 <h1 className="titulo-2">Realizar Cambios</h1>
                 <form className="form-2" onSubmit={actualizarSitio}>
@@ -167,15 +167,15 @@ const ActualizarSitio = () => {
                         <h2 className="titulo-colores">Elegir Colores:</h2>
                         <div>
                             <label>Barra Superior:</label>
-                            <ChromePicker color={colorBarra} onChange={(color) => setColorBarra(color.hex)} />
+                            <ChromePicker className="color-barra2 mb-4" color={colorBarra} onChange={(color) => setColorBarra(color.hex)} />
                         </div>
                         <div>
                             <label>Fondo:</label>
-                            <ChromePicker color={colorFondo} onChange={(color) => setColorFondo(color.hex)} />
+                            <ChromePicker className="color-fondo2 mb-4" color={colorFondo} onChange={(color) => setColorFondo(color.hex)} />
                         </div>
                         <div>
                             <label>Información:</label>
-                            <ChromePicker color={colorInformacion} onChange={(color) => setColorInformacion(color.hex)} />
+                            <ChromePicker className="color-informacion2 mb-4"  color={colorInformacion} onChange={(color) => setColorInformacion(color.hex)} />
                         </div>
                         <div>
                             <button type="submit" className="btn-vista2" onClick={actualizarSitio}>

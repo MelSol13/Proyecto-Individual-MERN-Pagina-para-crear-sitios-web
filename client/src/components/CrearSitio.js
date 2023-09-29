@@ -4,10 +4,11 @@ import { ChromePicker } from 'react-color';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 import"./CrearSitio.css"
+import ButtonLogout from './ButtonLogout';
 
 
 const CrearSitio = () => {
-    const imagen = "https://plus.unsplash.com/premium_photo-1682146042060-3617a8f344c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGRpc2UlQzMlQjFvJTIwd2VifGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60";
+    const imagen = "https://media.istockphoto.com/id/1387782756/es/foto/pc-de-computadora-moderna-con-carta-de-colores-en-la-pantalla-del-monitor-taza-de-caf%C3%A9-y.jpg?s=612x612&w=0&k=20&c=M94eQcTWc4bp4Z9_4VC_PO0olEwnoqpF7NT1kna6LaY=";
 
     const [nombre, setNombre] = useState('');
     const [categoria, setCategoria] = useState('');
@@ -81,6 +82,7 @@ const CrearSitio = () => {
 
     return (
         <div className='container-2'>
+            <ButtonLogout />
             <img src={imagen} className='imagen-princ' alt="Imagen predeterminada" />
             <div className='row'>
                 <h1 className='titulo'>Diseña a tu gusto</h1>

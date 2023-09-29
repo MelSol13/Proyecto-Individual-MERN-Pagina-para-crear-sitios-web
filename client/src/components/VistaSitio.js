@@ -29,23 +29,23 @@ const VistaSitio = () => {
 
 
     return (
-        <div style={{fontFamily: `${sitio.fuenteSeleccionada}`}}>
-            <ButtonLogout />
+        <div>
+            <ButtonLogout/>
             <div className='fondo' style={{background: `${sitio.colorFondo}`}}>
                 <div className='barraSuperior' style={{background: `${sitio.colorBarra}`}}>
-                    <p className='sitioNombre'>{sitio.nombre}</p>
+                    <p className='sitioNombre'style={{fontFamily: `${sitio.fuenteSeleccionada}`}}>{sitio.nombre}</p>
                     <img src={sitio.logo} className='logo' alt="logo"></img>
                 </div>
                 <div className='body'>
                     <div className='columna-izquierda' style={{background: `${sitio.colorInformacion}`}}>
                         <div>
-                            <p className='eslogan'>{sitio.eslogan}</p>
+                            <p className='eslogan'style={{fontFamily: `${sitio.fuenteSeleccionada}`}}>{sitio.eslogan}</p>
                         </div>
-                        <p className='descripcion'>{sitio.descripcion}</p>
+                        <p className='descripcion'style={{fontFamily: `${sitio.fuenteSeleccionada}`}}>{sitio.descripcion}</p>
                         <ul>
-                            <li><p className='servicio1'>{sitio.servicio1}</p></li>
-                            <li><p className='servicio2'>{sitio.servicio2}</p></li>
-                            <li><p className='servicio3'>{sitio.servicio3}</p></li>
+                            <li><p className='servicio1'style={{fontFamily: `${sitio.fuenteSeleccionada}`}}>{sitio.servicio1}</p></li>
+                            <li><p className='servicio2'style={{fontFamily: `${sitio.fuenteSeleccionada}`}}>{sitio.servicio2}</p></li>
+                            <li><p className='servicio3'style={{fontFamily: `${sitio.fuenteSeleccionada}`}}>{sitio.servicio3}</p></li>
                         </ul>
                     </div>
                     <div className='columna-derecha'>
@@ -61,7 +61,7 @@ const VistaSitio = () => {
                     </div>
                 </div>
             </div>
-            <div>
+            <div className='botones'>
                 <Link className="btn-cambios" to={"/editarsitio/" + sitio._id}>Realizar cambios</Link>
                 <button className="btn-sitio">Crear Sitio</button>
                 <button className="btn-borrar" onClick={() => borrarSitio(sitio._id)}>Borrar</button>
