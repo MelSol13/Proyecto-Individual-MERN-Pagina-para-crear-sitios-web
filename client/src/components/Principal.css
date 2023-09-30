@@ -1,8 +1,8 @@
-.container{
+.container {
     margin: 0px;
 }
 
-.container-princ{
+.container-princ {
     width: 1900px;
     height: 900px;
     background-image: url(https://img.freepik.com/free-vector/abstract-colorful-shapes-background_23-2148769634.jpg?size=626&ext=jpg&ga=GA1.1.556705.1695271294&semt=ais);
@@ -10,7 +10,7 @@
     background-repeat: no-repeat;
 }
 
-.img-princ{
+#img-princ {
     margin-top: 50px;
     margin-left: 200px;
     width: 700px;
@@ -18,19 +18,24 @@
     border-radius: 15px;
 }
 
-.crea{
+.animate__animated.animate__backInLeft {
+    --animate-duration: 5s;
+}
+
+.crea {
     color: rgb(246, 235, 246);
     display: flex;
     flex-direction: row;
     text-align: center;
     font-size: 60px;
-    font-family:fantasy;
+    font-family: fantasy;
     flex-direction: column;
     margin-left: 200px;
     margin-top: 50px;
     margin-bottom: 80px;
 }
-.btn-principal{
+
+.btn-principal {
     margin-left: 450px;
     font-size: 150%;
     font-style: oblique;
@@ -39,4 +44,4 @@
     border: 2px solid rgba(0, 0, 0, 0.356);
     border-radius: 20px;
     padding: 10px;
-}   
+}

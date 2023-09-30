@@ -25,6 +25,7 @@ const ActualizarSitio = () => {
     const [servicio1, setServicio1] = useState('');
     const [servicio2, setServicio2] = useState('');
     const [servicio3, setServicio3] = useState('');
+    const [contacto, setContacto] = useState('');
     const [imagen1, setImagen1] = useState('');
     const [imagen2, setImagen2] = useState('');
     const [imagen3, setImagen3] = useState('');
@@ -44,6 +45,7 @@ const ActualizarSitio = () => {
                 setServicio1(sitio.servicio1);
                 setServicio2(sitio.servicio2);
                 setServicio3(sitio.servicio3);
+                setContacto(sitio.contacto);
                 setImagen1(sitio.imagen1);
                 setImagen2(sitio.imagen2);
                 setImagen3(sitio.imagen3);
@@ -72,6 +74,7 @@ const ActualizarSitio = () => {
             servicio1,
             servicio2,
             servicio3,
+            contacto,
             imagen1,
             imagen2,
             imagen3,
@@ -157,6 +160,10 @@ const ActualizarSitio = () => {
                         <div className="form-group">
                             <label>Servicio 3:</label>
                             <input type="text" className="form-control" value={servicio3} onChange={(e) => setServicio3(e.target.value)} />
+                        </div>
+                        <div className='form-group'>
+                            <label>Contacto</label>
+                            <input type="text" className="form-control" value={contacto} onChange={(e) => setContacto(e.target.value)} />
                         </div>
                         <div className="form-group">
                             <label>Fuente:</label>

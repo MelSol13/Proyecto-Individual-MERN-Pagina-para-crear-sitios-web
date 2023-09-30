@@ -34,6 +34,9 @@ const EsquemaSitio = new mongoose.Schema({
     servicio3: {
         type:String,
     }, 
+    contacto:{
+        type:String,
+    },
     imagen1:{
         type:String,
     }, 

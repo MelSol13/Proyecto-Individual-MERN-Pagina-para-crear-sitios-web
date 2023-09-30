@@ -26,6 +26,7 @@ const CrearSitio = () => {
     const [imagen1, setImagen1] = useState('');
     const [imagen2, setImagen2] = useState('');
     const [imagen3, setImagen3] = useState('');
+    const [contacto, setContacto]= useState('');
 
     const [errores, setErrores] = useState({});
 
@@ -43,6 +44,7 @@ const CrearSitio = () => {
             servicio1,
             servicio2,
             servicio3,
+            contacto,
             imagen1,
             imagen2,
             imagen3,
@@ -83,7 +85,7 @@ const CrearSitio = () => {
     return (
         <div className='container-2'>
             <ButtonLogout />
-            <img src={imagen} className='imagen-princ' alt="Imagen predeterminada" />
+            <img src={imagen} id='imagen-princ' className='animate__animated animate__jello' alt="Imagen predeterminada" />
             <div className='row'>
                 <h1 className='titulo'>Diseña a tu gusto</h1>
                 <form className='form' onSubmit={guardarSitio}>
@@ -140,6 +142,10 @@ const CrearSitio = () => {
                         <div className='form-group'>
                             <label>Servicio 3:</label>
                             <input type="text" className="form-control" value={servicio3} onChange={(e) => setServicio3(e.target.value)} />
+                        </div>
+                        <div className='form-group'>
+                            <label>Contacto</label>
+                            <input type="text" className="form-control" value={contacto} onChange={(e) => setContacto(e.target.value)} />
                         </div>
                         <div className='form-group'>
                             <label>Fuente:</label>

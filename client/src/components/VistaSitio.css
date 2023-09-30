@@ -72,6 +72,27 @@
         margin-top: 50px;
         margin-left: 30px;
     }
+
+    .contacto{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+    
+    .logo-whats{
+        width: 100px;
+        border-radius: 50%;
+        margin-top: 40px;
+        margin-left: 50px;
+        margin-right: 20px ;
+    }
+    
+    .numero{
+        margin-top: 45px;
+        font-size: 50px;
+    }
+
+
     .columna-derecha{
         margin-top: 20px;
         margin-left: 20px;
@@ -80,25 +101,37 @@
         align-content: flex-start ;
     }
     
-    .imagen1{
+    #imagen1{
         width: 500px;
         margin-top: 30px;
         margin-bottom: 50px;
         margin-left: 100px;
     }
+
+    .animate__animated.animate__rollIn {
+        --animate-duration: 7s;
+    }
     
-    .imagen2{
+    #imagen2{
         width: 500px;
         margin-left: 100px;
         margin-right: 80px;
     }
     
-    .imagen3{
+    .animate__animated.animate__jackInTheBox {
+        --animate-duration: 7s;
+    }
+
+    #imagen3{
         width: 500px;
         height: 500px;
         margin-left: 100px;
         margin-top: 100px;
         margin-bottom: 20px;
+    }
+
+    .animate__animated.animate__zoomInUp {
+        --animate-duration: 7s;
     }
     
     .botones{
@@ -228,20 +261,28 @@
         align-content: flex-start ;
     }
     
-    .imagen1{
+    #imagen1{
         width: 500px;
         margin-top: 30px;
         margin-bottom: 50px;
         margin-left: 100px;
     }
+
+    .animate__animated.animate__rollIn {
+        --animate-duration: 7s;
+    }
     
-    .imagen2{
+    #imagen2{
         width: 500px;
         margin-left: 100px;
         margin-right: 80px;
     }
     
-    .imagen3{
+    .animate__animated.animate__jackInTheBox {
+        --animate-duration: 7s;
+    }
+
+    #imagen3{
         width: 500px;
         height: 500px;
         margin-left: 100px;
@@ -249,6 +290,10 @@
         margin-bottom: 20px;
     }
     
+    .animate__animated.animate__zoomInUp {
+        --animate-duration: 7s;
+    }
+
     .botones{
         display: flex;
         flex-direction: row;
@@ -360,6 +405,24 @@ ul{
     margin-top: 50px;
     margin-left: 30px;
 }
+
+.contacto{
+    display: flex;
+    flex-direction: row;
+}
+
+.logo-whats{
+    width: 40px;
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 20px ;
+}
+
+.numero{
+    margin-top: 45px;
+}
+
 .columna-derecha{
     margin-top: 20px;
     margin-left: 20px;
@@ -368,25 +431,37 @@ ul{
     align-content: flex-start ;
 }
 
-.imagen1{
+#imagen1{
     width: 200px;
     margin-top: 30px;
     margin-bottom: 20px;
     margin-left: 100px;
 }
 
-.imagen2{
+.animate__animated.animate__rollIn {
+    --animate-duration: 7s;
+}
+
+#imagen2{
     width: 200px;
     margin-left: 390px;
     margin-right: 80px;
 }
 
-.imagen3{
+.animate__animated.animate__jackInTheBox {
+    --animate-duration: 7s;
+}
+
+#imagen3{
     width: 200px;
     height: 200px;
     margin-left: 100px;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.animate__animated.animate__zoomInUp {
+    --animate-duration: 7s;
 }
 
 .btn-cambios{
