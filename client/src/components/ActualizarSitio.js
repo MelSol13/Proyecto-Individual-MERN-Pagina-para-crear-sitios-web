@@ -171,7 +171,7 @@ const ActualizarSitio = () => {
                         </div>
                     </div>
                     <div className="col-md-4">
-                        <h2 className="titulo-colores">Elegir Colores:</h2>
+                    <h2 className="titulo-colores">Elegir Colores:</h2>
                         <div>
                             <label>Barra Superior:</label>
                             <ChromePicker className="color-barra2 mb-4" color={colorBarra} onChange={(color) => setColorBarra(color.hex)} />

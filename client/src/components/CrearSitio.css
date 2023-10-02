@@ -7,14 +7,16 @@
 }
 
 .form{
-    margin-left: 200px;
+    margin-left: 300px;
     display: flex;
     flex-direction: row;
-    gap: 15%;
+    gap: 10%;
 }
 
 #imagen-princ{
-    margin-left: 200px;
+    margin-top: 50px;
+    margin-left: 300px;
+    margin-bottom: 50px;
     width: 1130px;
     height: 450px;
     border-radius: 20px;
@@ -28,7 +30,7 @@
     color:  rgba(18, 111, 125, 0.944);
     display: flex;
     flex-direction: column;
-    margin-left: 350px;
+    margin-left: 450px;
     margin-top: 30px;
     margin-bottom: 40px;
 }
