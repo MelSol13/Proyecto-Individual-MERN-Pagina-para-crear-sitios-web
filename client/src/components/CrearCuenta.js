@@ -59,7 +59,7 @@ function CrearCuenta() {
                             <input type="password" name="confirmPassword" id="confirmPassword" className="form-control mb-3" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
                             {errors.confirmPassword ? <span className='text-danger'>{errors.confirmPassword.message}</span> : null}
                         </div>
-                        <input type="submit" value="Registrarme" className='btn btn-success mb-3' />
+                        <input type="submit" value="Registrarme" id="regis" className='btn btn-success mb-3' />
                     </form>
                 </div>
                 <p className='ya'>¿Ya tienes una cuenta?<Link to="/iniciar-sesion" className='link'>Iniciar Sesión</Link></p>

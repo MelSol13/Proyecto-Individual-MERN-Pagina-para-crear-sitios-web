@@ -45,7 +45,7 @@ function IniciarSesion() {
                     <div>
                         {errorsLogin !== "" ? <span className='text-danger'>{errorsLogin}</span> : null}
                     </div>
-                    <input type="submit" value="Iniciar Sesión" className='btn btn-primary' />
+                    <input type="submit" value="Iniciar Sesión" className='bot-inic' />
                 </form>
             </div>
         </div>
