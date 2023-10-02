@@ -62,7 +62,7 @@ function CrearCuenta() {
                         <input type="submit" value="Registrarme" className='btn btn-success mb-3' />
                     </form>
                 </div>
-                <p className='ya'>¿Ya tienes una cuenta? <Link to="/iniciar-sesion">Iniciar Sesión</Link></p>
+                <p className='ya'>¿Ya tienes una cuenta?<Link to="/iniciar-sesion" className='link'>Iniciar Sesión</Link></p>
             </div>
         </div>
     );
